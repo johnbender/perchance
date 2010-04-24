@@ -5,13 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "perchance"
-    gem.summary = %Q{makes nil checking easier}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{makes nil checking easier and more flexible}
+    gem.description = gem.summary
     gem.email = "john.m.bender@gmail.com"
     gem.homepage = "http://github.com/johnbender/perchance"
     gem.authors = ["John Bender"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_development_dependency "mocha", "0.9.7"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
