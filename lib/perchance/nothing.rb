@@ -4,8 +4,8 @@ module Perchance
   class Nothing
     instance_methods.each do |imethod|
       define_method(imethod) do
-        msg = "Nothing##{imethod} was invoked, which is likely not what you wanted as it was inherited from Object"
-        unless Perchance.config[:warn_object_methods]# TODO option to log warning
+        msg = "Nothing##{imethod} was invoked, which is likely not what you wanted"
+        unless Perchance.config[:warn_object_methods]
           raise ObjectMethodCalled.new(msg)
         else
           Perchance::Util.logger.warn(msg)
