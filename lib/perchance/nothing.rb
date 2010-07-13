@@ -18,5 +18,9 @@ module Perchance
       Perchance::Util.logger.warn("method Perchance::Nothing##{method}' called")
       return self
     end
+    
+    def nil?
+      true
+    end
   end
 end

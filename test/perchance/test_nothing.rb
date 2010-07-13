@@ -25,4 +25,11 @@ class TestNothing < Test::Unit::TestCase
       Perchance::Nothing.new.foo
     end
   end
+
+  should "return true when asked if nil" do
+    assert Perchance::Nothing.new.foo.bar.baz.nil? 
+    foo = mock('foo')
+    foo.expects(:bar).returns(nil)
+    assert foo.bar.maybe.bing.baz.maybe.nil?
+  end
 end
